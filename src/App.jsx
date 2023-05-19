@@ -32,18 +32,21 @@ const App = () => {
         <button type="submit">Search</button>
         <button type="reset" onClick={() => setSearchInput('')}>Clear</button>
       </form>
-       
-      <ol>
-        <div className="cards">
+      <h3>Number of universities: {uniSearch.length}</h3>
+      
+      <ul>
+      <div className="cards">
         {uniSearch.map((uni) => (
           <li key={uni.name}>
+            <div className="cards1">
             <h4>{uni.name}</h4>
             <p>{uni.country}</p>
             <p>{uni.web_pages}</p>
+            </div>
           </li>
         ))}
         </div>
-      </ol>
+      </ul>
     </div>
   );
 };
